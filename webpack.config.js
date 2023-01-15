@@ -75,6 +75,7 @@ module.exports = (env) => {
         devServer: {
             static: path.join(__dirname, "public"),
             historyApiFallback: true,
+            hot: true
         },
     };
 };

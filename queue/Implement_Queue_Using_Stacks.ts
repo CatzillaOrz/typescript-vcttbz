@@ -44,6 +44,7 @@ class MyQueue {
  */
 
 var obj = new MyQueue()
+console.log(obj)
 obj.push(1)
 obj.push(2)
 var param_3 = obj.peek()
