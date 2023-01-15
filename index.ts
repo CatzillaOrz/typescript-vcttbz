@@ -7,3 +7,4 @@ import "normalize.css/normalize.css";
 //appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
 const app = 200;
 console.log(app)
+
