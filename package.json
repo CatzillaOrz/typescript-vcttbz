@@ -1,6 +1,39 @@
 {
-  "name": "typescript",
+  "name": "leecodecatzilla.ts",
   "version": "0.0.0",
   "private": true,
-  "dependencies": {}
+  "scripts": {
+    "build:dev": "webpack",
+    "build:prod": "webpack --env production",
+    "test": "cross-env NODE_ENV=test jest --config=jest.config.json",
+    "build-babel": "babel src/index.js --out-file=public/script/app.js --presets=env,react --watch",
+    "build": "webpack --watch",
+    "server": "live-server public",
+    "dev-server": "webpack-dev-server",
+    "start": "node server/server.js",
+    "heroku-postbuild": "npm run build:prod"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-typescript": "^7.18.6",
+    "babel-loader": "^9.1.2",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.3",
+    "dotenv": "^16.0.3",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.7.2",
+    "node-sass": "^8.0.0",
+    "normalize.css": "^8.0.1",
+    "sass-loader": "^13.2.0",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.4",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  }
 }
