@@ -17,25 +17,28 @@
  *
 */
 
-class MyQueue {
-    constructor() {
+class MyStack {
+    private queue: Array<number>;
 
+    constructor() {
+        this.queue = []
     }
 
     push(x: number): void {
-
+        //this.queue.unshift(x)
+        this.queue = [x, ...this.queue];
     }
 
     pop(): number {
-
+        return this.queue.shift()
     }
 
     peek(): number {
-
+        return this.queue[0]
     }
 
     empty(): boolean {
-
+        return !!this.queue.length
     }
 }
 
