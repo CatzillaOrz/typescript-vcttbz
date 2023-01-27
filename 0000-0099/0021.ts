@@ -10,7 +10,19 @@
  * }
  */
 
+class ListNode {
+    val: number
+    next: ListNode | null
+    constructor(val?: number, next?: ListNode | null) {
+        this.val = (val===undefined ? 0 : val)
+        this.next = (next===undefined ? null : next)
+    }
+}
+
+
 function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode | null {
+    // list1 & list2 null should use ListNode to determine is null or not
+    // mistake: use list1.next == null | list2.next == null will not work
   if(list1 === null){
       return list2
   }
