@@ -35,5 +35,4 @@ function searchBST(root: TreeNode | null, val: number): TreeNode | null {
     else {
         return searchBST(root.left, val)
     }
-
 };
